@@ -645,11 +645,12 @@ def display_sector_pie_fig(ticker):
         fig, fig2 = create_pie_chart(sectors_flattened=sectors_df, holdings=holdings)
         styled_plotly_chart(fig, f"{ticker} Sector Allocation")
         styled_plotly_chart(fig2, f"{ticker} Holdings Allocation")
+        redis_config = st.secrets["redis"]
         r = redis.Redis(
-            host="redis-14320.c305.ap-south-1-1.ec2.redns.redis-cloud.com",
-            port=14320,
-            username="default",
-            password="sZPzjhoSF6Hcz15tX3zReq3zlqIluqJR")
+            host=redis_config["host"],
+            port=redis_config["port"],
+            username=redis_config["username"],
+            password=redis_config["password"])
         redis_key = f"country_exposure:{selected_ticker_symbol}"
         data = r.get(redis_key)
         json_string = data.decode('utf-8')   
@@ -774,4 +775,5 @@ if __name__ == "__main__":
     create_etf_dashboard_content(selected_ticker= selected_etf)  
     display_nav_chart(selected_ticker=selected_etf)
     display_sector_pie_fig(ticker=selected_etf)
+
 

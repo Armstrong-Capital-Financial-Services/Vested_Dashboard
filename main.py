@@ -22,11 +22,6 @@ db_config = {
     "dbname": db_config["dbname"]
 }
 
-SUPABASE_URL = st.secrets["SUPABASE_URL"]
-SUPABASE_KEY = st.secrets["SUPABASE_KEY"]
-supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
-
-
 def fetch_table_data(connection, table_name):
     """Fetch data from a PostgreSQL table and return as a Pandas DataFrame."""
     try:
@@ -775,5 +770,6 @@ if __name__ == "__main__":
     create_etf_dashboard_content(selected_ticker= selected_etf)  
     display_nav_chart(selected_ticker=selected_etf)
     display_sector_pie_fig(ticker=selected_etf)
+
 
 

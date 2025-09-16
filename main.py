@@ -11,17 +11,19 @@ import json
 import redis
 import quantstats as qs
 from datetime import timedelta
-st.set_page_config(layout='wide')
+st.set_page_config(layout='wide') 
+
+db_config = st.secrets["db_config"]
 db_config = {
-    "user": "postgres.oreorwkjfcoyjebnyneh",
-    "password": "Armstrong@2025",
-    "host": "aws-0-ap-south-1.pooler.supabase.com",
-    "port": "6543",
-    "dbname": "postgres"
+    "user": db_config["user"],
+    "password": db_config["password"],
+    "host": db_config["host"],
+    "port": db_config["port"],
+    "dbname": db_config["dbname"]
 }
 
-SUPABASE_URL = 'https://lreayibwfsrxxsxjpzky.supabase.co'
-SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxyZWF5aWJ3ZnNyeHhzeGpwemt5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzk0Njc2NDIsImV4cCI6MjA1NTA0MzY0Mn0.w-rugLZaI3KfUOZ3UZDCYrrCoi160HL0p7L204fJe8Q'
+SUPABASE_URL = st.secrets["SUPABASE_URL"]
+SUPABASE_KEY = st.secrets["SUPABASE_KEY"]
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 
@@ -772,3 +774,4 @@ if __name__ == "__main__":
     create_etf_dashboard_content(selected_ticker= selected_etf)  
     display_nav_chart(selected_ticker=selected_etf)
     display_sector_pie_fig(ticker=selected_etf)
+

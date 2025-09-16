@@ -21,7 +21,7 @@ def inject_custom_styles():
 inject_custom_styles()
 
 # --- Load ETF universe (adjust path for your system) ---
-ETF_universe = pd.read_csv(r'C:\Users\Armstrong Admin\Downloads\VESTED-PROJECT\US ETF UNIVERSE.csv')
+ETF_universe = pd.read_csv(r'US ETF UNIVERSE.csv')
 st.session_state.etf_universe = ETF_universe
 
 # --- Filters for thematic groups ---

@@ -242,7 +242,8 @@ ETF_selected = st.multiselect(
         "ESPO - VanEck Video Gaming and eSports ETF",
         "NLR - VanEck Uranium and Nuclear ETF",
         "CIBR - First Trust NASDAQ Cybersecurity ETF",
-        "PPA - Invesco Aerospace & Defense ETF"
+        "PPA - Invesco Aerospace & Defense ETF",
+        "AIQ - Global X Artificial Intelligence"
     ],
     max_selections=3
 )

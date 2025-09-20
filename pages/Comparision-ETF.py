@@ -243,7 +243,8 @@ ETF_selected = st.multiselect(
         "NLR - VanEck Uranium and Nuclear ETF",
         "CIBR - First Trust NASDAQ Cybersecurity ETF",
         "PPA - Invesco Aerospace & Defense ETF",
-        "AIQ - Global X Artificial Intelligence"
+        "AIQ - Global X Artificial Intelligence",
+        "QQQ - Invesco Nasdaq 100 ETF"
     ],
     max_selections=3
 )

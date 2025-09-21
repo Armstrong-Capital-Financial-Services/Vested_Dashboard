@@ -316,7 +316,7 @@ if len(selected_etf_tickers) > 0:
         nav_data_df.sort_values(by='Date', inplace=True)
         nav_data_df.set_index('Date', inplace=True)
         latest_date = nav_data_df.index.max()
-        timeframes = {"1M": 21, "3M": 63, "6M": 126 , "1Y": 252, "3Y": 252 * 3}
+        timeframes = {"1M": 21, "3M": 66, "6M": 132 , "1Y": 252, "3Y": 252 * 3}
         returns = {'Ticker': ticker}
         latest_price = nav_data_df['Close'].iloc[-1]
         for label, days in timeframes.items():

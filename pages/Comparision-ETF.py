@@ -321,9 +321,9 @@ if len(selected_etf_tickers) > 0:
         latest_price = nav_data_df['Close'].iloc[-1]
         for label, days in timeframes.items():
             start_date = latest_date - timedelta(days=days)
-            df_filtered = nav_data_df[nav_data_df.index <= start_date]
+            df_filtered = nav_data_df[nav_data_df.index >= start_date]
             if not df_filtered.empty:
-                start_price = df_filtered['Close'].iloc[-1]
+                start_price = df_filtered['Close'].iloc[0]
                 ret = ((latest_price / start_price) - 1) * 100
                 returns[label] = round(ret, 2)
             else:

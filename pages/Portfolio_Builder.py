@@ -739,7 +739,7 @@ def display_selected_portfolio():
                     nav_data.reset_index(inplace=True)
                     nav_data['Date'] = pd.to_datetime(nav_data['Date']).dt.tz_localize(None)
                     nav_data = nav_data[['Date', 'Close']]
-                    start_date = (datetime.today() - timedelta(days=3*364))
+                    start_date = (datetime.today() - timedelta(days=3*252))
                     nav_data = nav_data[nav_data['Date'] >= start_date]
                     if price_data.empty:
                          price_data['Date'] = nav_data['Date']
@@ -783,7 +783,7 @@ def display_selected_portfolio():
 
             price_data = price_data.copy()
             price_data = price_data.set_index("Date").sort_index()
-            timeframes = {'1M': 30,'3M': 90,'6M': 180,'1Y': 365, '3Y': 730, }
+            timeframes = {'1M': 22,'3M': 66,'6M': 132,'1Y': 252, '3Y': 756, }
             portfolio_returns = {}
             end_date = price_data.index[-1]
             end_price = price_data["Portfolio_Value"].iloc[-1]

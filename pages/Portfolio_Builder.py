@@ -471,7 +471,8 @@ def display_etf_card_with_form():
         "NLR - VanEck Uranium and Nuclear ETF",
         "CIBR - First Trust NASDAQ Cybersecurity ETF",
         "PPA - Invesco Aerospace & Defense ETF",
-        "AIQ - Global X Artificial Intelligence"
+        "AIQ - Global X Artificial Intelligence",
+        "QQQ - Invesco Nasdaq 100 ETF"
     ]
 
     col0, col01 = st.columns([0.8, 1], gap="medium")

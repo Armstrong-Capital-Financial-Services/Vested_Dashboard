@@ -473,7 +473,9 @@ def display_etf_card_with_form():
         "PPA - Invesco Aerospace & Defense ETF",
         "AIQ - Global X Artificial Intelligence",
         "QQQ - Invesco Nasdaq 100 ETF",
-        "FNGS - MicroSectors FANG ETF"]
+        "FNGS - MicroSectors FANG ETF",
+        "ARKQ - Ark Autonomous Technology & Robotics ETF",
+        "RTH - VanEck Retail ETF"]
 
     col0, col01 = st.columns([0.8, 1], gap="medium")
 

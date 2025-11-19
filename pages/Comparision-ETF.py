@@ -246,7 +246,12 @@ ETF_selected = st.multiselect(
         "AIQ - Global X Artificial Intelligence",
         "QQQ - Invesco Nasdaq 100 ETF",
         "ARKQ - ARK Autonomous Technology & Robotics ETF",
-        "RTH - VanEck Retail ETF"
+        "RTH - VanEck Retail ETF",
+        "PJP - Invesco Pharmaceuticals ETF",
+        "PBE - Invesco Biotechnology & Genome ETF",
+        "ARKX - ARK Space Exploration & Innovation ETF",
+        "BBP - Virtus LifeSci Biotech Products ETF",
+        "UFO - Procure Space ETF"
     ],
     max_selections=3
 )

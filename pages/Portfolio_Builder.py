@@ -475,7 +475,12 @@ def display_etf_card_with_form():
         "QQQ - Invesco Nasdaq 100 ETF",
         "FNGS - MicroSectors FANG ETF",
         "ARKQ - Ark Autonomous Technology & Robotics ETF",
-        "RTH - VanEck Retail ETF"]
+        "RTH - VanEck Retail ETF",
+        "PJP - Invesco Pharmaceuticals ETF",
+        "PBE - Invesco Biotechnology & Genome ETF",
+        "ARKX - ARK Space Exploration & Innovation ETF",
+        "BBP - Virtus LifeSci Biotech Products ETF",
+        "UFO - Procure Space ETF"]
 
     col0, col01 = st.columns([0.8, 1], gap="medium")
 
